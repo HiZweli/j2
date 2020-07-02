@@ -1,5 +1,5 @@
 
-****Code wars Challenges****
+// ****Code wars Challenges****
 
 /*
 code for calculating which quater of the year does each month fall
@@ -32,12 +32,12 @@ function getDrinkByProfession(param ){
  /* 
     switch(param){
       case "JABRONI":
-          // set newCoice = "Patron Tequila"
+           set newCoice = "Patron Tequila"
       default : 
-          // set newCoice = "Beer"
+           set newCoice = "Beer"
     }
  
-    learn more here : https://www.w3schools.com/js/js_switch.asp
+    learn more about switch statement here : https://www.w3schools.com/js/js_switch.asp
  */
   if (fix === "JABRONI") {
     console.log("Patron Tequila");
