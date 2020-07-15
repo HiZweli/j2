@@ -19,49 +19,67 @@ under
 /*
 Another code wars Challenges that totally works!!
 */
+const submit = document.querySelector(".submit")
 
-function getDrinkByProfession(param ){ 
+submit.addEventListener('click', function(){
+  const getInputs = () =>{
+    const getOrder = document.querySelector(".input");
+    const order = getOrder.value;
+    const usersChoice = document.querySelector("#usersChoice");
+    const choice = usersChoice.value;
+    alert(order);
+    return order;
+    return choice;
+  };
 
-  const fix = param.toUpperCase();
-  
+  const readyOrder = () => {
+    getInputs()
+
+    let drink;
+   switch (drink) {
+     case order === "JABRONI":
+       drink = "Patron Tequila";
+       break;
+     case order === "SCHOOL COUNSELOR":
+       drink = "Anything with Alcohol";
+       break;
+     case order === "PROGRAMMER":
+       drink = "Hipster craft beer";
+       break;
+     case order === "BIKE GANG MEMEBER":
+       drink = "Moonshine";
+       break;
+     case order === "POLITICIAN":
+       drink = "Your tax dollars";
+       break;
+     case order === "RAPPER":
+       drink = "Cristal";
+       break;
+     default:
+       drink = "Beer";
+   }
+
+   return drink;
+  };
+
+ const returnOutput = () =>{
+  const output = usersChoice === drink;
+  return output;
+
+ };
+
+  returnOutput(readyOrder());
+});
+
+
   // learn how to here : https://www.w3schools.com/jsref/met_document_queryselector.asp
   // get the element where the user's choice is shown ie:  document.querySelactor(#usersChoice)
   // declare an empty variable ie : let newCoice = null;
 
- // use switch case statement instaed of if else  : ie: 
- /* 
-    switch(param){
-      case "JABRONI":
-           set newCoice = "Patron Tequila"
-      default : 
-           set newCoice = "Beer"
-    }
- 
-    learn more about switch statement here : https://www.w3schools.com/js/js_switch.asp
- */
-  if (fix === "JABRONI") {
-    console.log("Patron Tequila");
-    // set newCoice = "Patron Tequila"
-  }else if (fix === "SCHOOL COUNSELOR") {
-    console.log("Anything with Alcohol");
-     // set newCoice = "Anything with Alcohol"
-  }else if (fix === "PROGRAMMER") {
-    console.log("Hipster Craft Beer");
-     // set newCoice = "PROGRAMMER"
-  }else if (fix === "BIKE GANG MEMBER") {
-    console.log("Moonshine");
-     // set newCoice = BIKE GANG MEMBER"
-  }else if (fix === "POLITICIAN") {
-    console.log("Your tax dollars");
-     // set newCoice = "POLITICIAN"
-  }else if (fix === "RAPPER") {
-    console.log("Cristal");
-     // set newCoice = "RAPPER"
-  }else {
-    console.log("Beer");
-  }
+ // use switch case statement instaed of if else  : ie:
+
+    // learn more about switch statement here : https://www.w3schools.com/js/js_switch.asp
+
 
   // change the value of the usersChoice html to the value of newChoice so the html changes when the user presses the button
   // learn how to here : https://www.w3schools.com/jsref/prop_html_innerhtml.asp
-
-}
